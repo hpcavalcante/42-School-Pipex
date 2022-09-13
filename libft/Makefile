@@ -6,7 +6,7 @@
 #    By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/01 18:27:12 by hepiment          #+#    #+#              #
-#    Updated: 2022/06/24 04:57:23 by hepiment         ###   ########.fr        #
+#    Updated: 2022/09/12 18:45:28 by hepiment         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		
 CFLAGS = -Wall -Wextra -Werror
 
-CC = gcc
+CC = cc
 
 OBJS = ${SRCS:.c=.o}
 

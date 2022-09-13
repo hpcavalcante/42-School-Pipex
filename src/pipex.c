@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 12:19:40 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/12 17:58:35 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/12 19:46:54 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,20 +46,20 @@ void	child2_process(char **argv, char **envp, int *fd)
 	execute(argv[3], envp);
 }
 
-void    parent(int *fd, int pid1, int pid2)
+void	parent(int *fd, int pid1, int pid2)
 {
-    int    wstatus;
-    int    status_code;
+	int	wstatus;
+	int	status_code;
 
-    close(fd[0]);
-    close(fd[1]);
-    waitpid(pid1, NULL, 0);
-    waitpid(pid2, &wstatus, 0);
-    if (WIFEXITED(wstatus))
-    {
-        status_code = WEXITSTATUS(wstatus);
-        exit(status_code);
-    }
+	close(fd[0]);
+	close(fd[1]);
+	waitpid(pid1, NULL, 0);
+	waitpid(pid2, &wstatus, 0);
+	if (WIFEXITED(wstatus))
+	{
+		status_code = WEXITSTATUS(wstatus);
+		exit(status_code);
+	}
 }
 
 int	main(int argc, char **argv, char **envp)

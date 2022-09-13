@@ -6,7 +6,7 @@
 #    By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/07 12:16:17 by hepiment          #+#    #+#              #
-#    Updated: 2022/09/09 12:11:00 by hepiment         ###   ########.fr        #
+#    Updated: 2022/09/12 18:45:14 by hepiment         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ OBJS = $(patsubst $(PATH_SRC)%.c, $(PATH_OBJS)%.o, $(SRC))
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@make re -C ./libft
+	@make -C ./libft
 	@$(CC) $(CFLAGS) $(OBJS) $(INCLUDE) -Llibft -lft -o $(NAME)
 
 $(PATH_OBJS)%.o: $(PATH_SRC)%.c
@@ -48,5 +48,6 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+	@make re -C ./libft
 
 .PHONY: all clean fclean re
