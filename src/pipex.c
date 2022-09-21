@@ -6,7 +6,7 @@
 /*   By: hepiment <hepiment@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 12:19:40 by hepiment          #+#    #+#             */
-/*   Updated: 2022/09/12 19:46:54 by hepiment         ###   ########.fr       */
+/*   Updated: 2022/09/21 11:22:30 by hepiment         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int	main(int argc, char **argv, char **envp)
 	{
 		write(2, "Error: Invalid number of arguments.\n", 37);
 		write(1, "Ex: ./pipex <file1> <cmd1> <cmd2> <file2>\n", 43);
+		exit(1);
 	}
 	else
 	{
